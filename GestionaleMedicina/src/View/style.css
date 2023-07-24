@@ -1,0 +1,214 @@
+/* Root - background */
+.root {
+    -fx-background-image: url("images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+/* Titoli pannelli */
+.title-choice, .title-login {
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+}
+
+/* SceltaLogin.fxml - Bottone paziente */
+.button-patient-choice {
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #D9D9D9;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.button-patient-choice:hover, .button-doctor-choice:hover {
+    -fx-background-color: grey;
+}
+
+/* SceltaLogin.fxml - Bottone dottore */
+.button-doctor-choice {
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #D9D9D9;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+/* Paziente/DottoreLogin.fxml - Label credenziali */
+.username-label, .password-label {
+    -fx-font-weight: bold;
+}
+
+/* Paziente/DottoreLogin.fxml - Input credenziali */
+.username-field, .password-field {
+    -fx-background-color: #D9D9D9;
+}
+
+/* Paziente/DottoreLogin.fxml - Bottone indietro */
+.back-button {
+    -fx-border-radius: 20;
+    -fx-background-color: #D9D9D9;
+    -fx-cursor: hand;
+}
+
+.logout-button{
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color: #f16b6b;
+    -fx-cursor: hand;
+}
+
+/* Paziente/DottoreLogin.fxml - Bottone login */
+.login-button, .send-button {
+    -fx-border-radius: 20;
+    -fx-background-color: #b2f57a;
+    -fx-cursor: hand;
+}
+
+.back-button:hover  {
+    -fx-background-color: #a1a1a1;
+}
+
+.logout-button:hover{
+    -fx-background-color: #ed5353;
+}
+.login-button:hover, .send-button:hover {
+    -fx-background-color: #46db5f;
+}
+
+.titled-pane-lista{
+    -fx-background-image: url("images/background.jpg");
+}
+
+#title{
+    -fx-background-color:  #5bbaa6;
+    -fx-text-alignment: center;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+    -fx-text-fill:white;
+}
+/* Fake text fields */
+.faketextfield1{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield2{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield3{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+.faketextfield4{
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+
+.faketextfield4-patient{
+    -fx-border-color: grey;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-background-color:white;
+}
+
+.faketextfield5-patient{
+    -fx-border-color: grey;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-background-color:white;
+}
+
+.pazientiBotton{
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: #D9D9D9;
+    -fx-cursor: hand;
+}
+
+.patient-details-text-field {
+    -fx-background-color: #ededeb;
+    -fx-prompt-text-fill: #838485;
+}
+
+.patient-details-text-area {
+    -fx-background-color: #ededeb;
+    -fx-control-inner-background: #ededeb;
+}
+
+.today-date {
+    -fx-background-color: #64cad1;
+    -fx-padding: 3;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.doctor-details-text-field{
+    -fx-background-color: #ededeb;
+    -fx-prompt-text-fill: #838485;
+}
+
+.doctor-details-text-field{
+    -fx-background-color: #ededeb;
+    -fx-control-inner-background: #ededeb;
+}
+
+
+/* Dettagli paziente - Therapy label */
+.medicine-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+.ass-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+
+.quant-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+
+.ind-th-label{
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #edd182;
+}
+
+.symp-info-label {
+    -fx-background-radius: 10;
+    -fx-padding: 5;
+    -fx-background-color: #e0e0e0;
+}
+
+/* Stili valori tabella */
+.optimal-value {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+}
+
+.normal-value {
+    -fx-text-fill: #c9bf28;
+    -fx-font-weight: bold;
+}
+
+.warning-value {
+    -fx-text-fill: orange;
+    -fx-font-weight: bold;
+}
+
+.danger-value {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}

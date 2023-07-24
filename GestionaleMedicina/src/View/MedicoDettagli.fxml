@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControllerDettagliMedico">
+    <children>
+        <TextField fx:id="title" alignment="CENTER" editable="flase" layoutY="-1.0" prefHeight="51.0" prefWidth="1000.0">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <Label alignment="CENTER" layoutX="412.0" layoutY="14.0" text="Dettagli Medico" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="26.0" layoutY="70.0" minWidth="-Infinity" prefHeight="75.0" prefWidth="377.0">
+            <children>
+                <TextField fx:id="faketextfield1" editable="false" prefHeight="75.0" prefWidth="377.0" />
+                <HBox layoutX="104.0" layoutY="40.0" prefHeight="30.0" prefWidth="150.0">
+                    <children>
+                        <Label fx:id="todayDate" text="Data">
+                            <font>
+                                <Font name="Arial" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label fx:id="doctorFullName" layoutX="104.0" layoutY="23.0" text="Nome Cognome">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="60.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/doctor_profile_icon.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="backButton" layoutX="283.0" layoutY="28.0" mnemonicParsing="false" onAction="#indietroButton" text="Cambia...">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="429.0" layoutY="70.0" prefHeight="513.0" prefWidth="502.0">
+            <children>
+                <TextField fx:id="faketextfield2" editable="false" prefHeight="513.0" prefWidth="548.0" />
+                <Label contentDisplay="CENTER" layoutX="238.0" layoutY="21.0" prefHeight="28.0" prefWidth="80.0" text="Terapia" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <HBox alignment="TOP_CENTER" layoutX="113.0" layoutY="70.0" prefHeight="100.0" prefWidth="317.0">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="Farmaco" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="medTherapyTextF" promptText="Zerinol">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets right="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0">
+                            <children>
+                                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="Assunzioni (per day)" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="assTherapyTextF" promptText="3">
+                                    <font>
+                                        <Font name="Arial" size="13.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="10.0" top="5.0" />
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <TextArea fx:id="infoTextA" layoutX="35.0" layoutY="330.0" prefHeight="68.0" prefWidth="474.0" promptText="Informazioni aggiuntive su paziente" />
+                <Button fx:id="sendButton" layoutX="251.0" layoutY="461.0" mnemonicParsing="false" onAction="#sendTherapy" text="Invia">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="197.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/pills_32.png" />
+                    </image>
+                </ImageView>
+            <HBox alignment="TOP_CENTER" layoutX="113.0" layoutY="177.0" prefHeight="100.0" prefWidth="317.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="150.0" prefHeight="0.0" prefWidth="270.0" text="Quantità (mg)" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="quantityTherapyTextF" promptText="10mg">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0">
+                     <children>
+                        <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="269.0" text="Indicazioni" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="indTherapyTextF" promptText="Dopo i pasti">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="300.0" prefHeight="17.0" prefWidth="199.0" text="Informazioni sul paziente" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="26.0" layoutY="159.0" minWidth="-Infinity" prefHeight="423.0" prefWidth="377.0">
+            <children>
+                <TextField fx:id="faketextfield3" editable="false" prefHeight="423.0" prefWidth="377.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="6.0" prefHeight="28.0" prefWidth="152.0" text="Dati Paziente" textAlignment="JUSTIFY">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <VBox layoutX="19.0" layoutY="212.0" prefHeight="200.0" prefWidth="345.0">
+                    <children>
+                  <TableView fx:id="rilevationsTable" prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="dataColumn" editable="false" prefWidth="115.0" resizable="false" sortable="false" text="Data" />
+                      <TableColumn fx:id="sbpColumn" editable="false" prefWidth="125.0" resizable="false" sortable="false" text="SBP" />
+                        <TableColumn fx:id="dbpColumn" editable="false" prefWidth="113.0" resizable="false" sortable="false" text="DBP" />
+                    </columns>
+                  </TableView>
+                    </children>
+                </VBox>
+            <TextField fx:id="faketextfield4" editable="false" layoutX="14.0" layoutY="36.0" prefHeight="167.0" prefWidth="354.0" />
+            <Label fx:id="patientName" layoutX="115.0" layoutY="50.0" text="Nome">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="69.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/patient_profile_icon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="patientSurname" layoutX="115.0" layoutY="66.0" text="Cognome">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="faketextfield5" editable="false" layoutX="23.0" layoutY="89.0" prefHeight="107.0" prefWidth="334.0" />
+            <Label fx:id="patientSymptoms" alignment="CENTER" layoutX="103.0" layoutY="113.0" wrapText="true" text="-" />
+            <Label fx:id="patientInformations" alignment="CENTER" layoutX="79.0" layoutY="155.0" wrapText="true" text="-" />
+            <Label layoutX="35.0" layoutY="117.0" text="Sintomi:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="159.0" text="Info:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
